@@ -13,13 +13,9 @@ def main():
         "DEAD command line interface"
     )
 
-    # group parser
-    group = parser.add_mutually_exclusive_group()
-
     # handler class
     dead_commander = DEADCommander(
-        parser=parser,
-        group=group
+        parser=parser
     )
 
     dead_commander.parse()
