@@ -65,4 +65,12 @@ class DEADCommon(object):
             ),
         ]
 
+        fp = os.path.join(
+            self.instance_dir,
+            "requirements.txt"
+        )
+
+        if os.path.exists(fp):
+            out.append(fp)
+
         return out

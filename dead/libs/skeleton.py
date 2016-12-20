@@ -17,6 +17,7 @@ class Skeleton(object):
 
     def inject(self):
         self.export_repo()
+        self.adjust_settings()
 
     def export_repo(self):
         cmd = "svn export {}/trunk/".format(
