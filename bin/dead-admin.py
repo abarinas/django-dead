@@ -5,6 +5,10 @@ import argparse
 from dead import DEADCommander
 
 
+def default_func(args):
+    print(args)
+
+
 def main():
     """ Command line interface
     """
@@ -14,14 +18,14 @@ def main():
     )
 
     # subparsers
-    subparsers = parser.add_subparsers(dest='cmd')
-    subparsers.required = False
+    subparsers = parser.add_subparsers()
 
     # add template parser
     add_template_parser = subparsers.add_parser(
         'add_template',
         help='Create a new template based django project (DEAD project)'
     )
+    add_template_parser.set_defaults(default_func)
 
     # handler class
     dead_commander = DEADCommander(
