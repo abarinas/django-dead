@@ -27,7 +27,7 @@ class Skeleton(object):
         cmd = "mv -f trunk/* ."
         os.system(cmd)
 
-        cmd = "mv -f trunk/.* ."
+        cmd = "mv -f trunk/{.,}* ."
         os.system(cmd)
 
         cmd = "rm -Rf trunk"
