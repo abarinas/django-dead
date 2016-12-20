@@ -22,6 +22,9 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
         # Create new django project
         self.create_definition()
 
+        # Run migration
+        self.migration_definition()
+
     def make_actions(self):
         # Update package
         self.update_action()
@@ -37,6 +40,9 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
 
         # Create new django project
         self.create_action()
+
+        # Run migration
+        self.migration_action()
 
     def parse(self):
         self.make_definitions()

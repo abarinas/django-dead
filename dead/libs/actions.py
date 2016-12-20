@@ -61,3 +61,10 @@ class DEADActions(object):
         os.system("django-admin.py startproject conf {}".format(
             self.instance_dir
         ))
+
+    def migration_action(self):
+        if not self.parsed_args.migrate:
+            return
+
+        os.system("python manage.py makemigrations")
+        os.system("python manage.py migrate")

@@ -41,3 +41,11 @@ class DEADDefinition(object):
             help="Create new django project",
             action="store_true"
         )
+
+    def migration_definition(self):
+        self.parser.add_argument(
+            "-m",
+            "--migration",
+            help="Run makemigrations and migration",
+            action="store_true"
+        )

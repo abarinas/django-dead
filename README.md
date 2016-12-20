@@ -32,3 +32,8 @@ Django Easy Applications Development
     ```bash
     dead-admin.py -c
     ```
+
+* Make migrations and migrate django project:
+    ```bash
+    dead-admin.py -m
+    ```
