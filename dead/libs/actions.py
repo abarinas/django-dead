@@ -92,3 +92,4 @@ class DEADActions(object):
             return
 
         template_name, slug, short_title, long_title, domain, email, password, email_bcc_recipient = self.parsed_args.template
+
