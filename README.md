@@ -5,7 +5,7 @@ Django Easy Applications Development
 
 * Install package:
     ```bash
-    pip install -U https://github.com/000paradox000/django-dead.git
+    pip install -U git+https://github.com/000paradox000/django-dead.git
     ```
   
 * Update django-dead package:
