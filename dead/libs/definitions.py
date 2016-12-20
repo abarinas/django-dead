@@ -17,3 +17,11 @@ class DEADDefinition(object):
             help="Delete project",
             action="store_true"
         )
+
+    def install_os_dependencies_definition(self):
+        self.parser.add_argument(
+            "-s",
+            "--osdependencies",
+            help="Install Operating System dependencies",
+            action="store_true"
+        )

@@ -13,12 +13,18 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
         # Delete project if exists
         self.delete_definition()
 
+        # Install operating system dependencies
+        self.install_os_dependencies_definition()
+
     def make_actions(self):
         # Update package
         self.update_action()
 
         # Delete project if exists
         self.delete_action()
+
+        # Install operating system dependencies
+        self.install_os_dependencies_action()
 
     def parse(self):
         self.make_definitions()

@@ -38,7 +38,7 @@ class DEADCommon(object):
         )
 
     @property
-    def system_dependencies_file(self):
+    def os_dependencies_file(self):
         return os.path.join(
             self.assets_dir,
             "dependencies",

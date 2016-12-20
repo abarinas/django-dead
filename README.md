@@ -17,3 +17,8 @@ Django Easy Applications Development
     ```bash
     dead-admin.py -d
     ```
+
+* Install operating system dependencies:
+    ```bash
+    dead-admin.py -s
+    ```

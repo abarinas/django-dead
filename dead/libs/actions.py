@@ -34,3 +34,13 @@ class DEADActions(object):
                 "-Rf",
                 item,
             ])
+
+    def install_os_dependencies_action(self):
+        if not self.parsed_args.osdependencies:
+            return
+
+        cmd = "sh {}".format(
+            self.os_dependencies_file
+        )
+
+        os.system(cmd)
