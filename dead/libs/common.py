@@ -20,7 +20,9 @@ class DEADCommon(object):
     @property
     def package_dir(self):
         return os.path.dirname(
-            os.path.abspath(__file__)
+            os.path.dirname(
+                os.path.abspath(__file__)
+            )
         )
 
     @property
