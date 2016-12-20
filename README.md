@@ -20,7 +20,7 @@ Django Easy Applications Development
 
 * Install operating system dependencies:
     ```bash
-    dead-admin.py -s
+    dead-admin.py -o
     ```
 
 * Install pip dependencies:

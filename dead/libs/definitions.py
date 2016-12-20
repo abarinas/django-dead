@@ -20,7 +20,7 @@ class DEADDefinition(object):
 
     def install_os_dependencies_definition(self):
         self.parser.add_argument(
-            "-s",
+            "-o",
             "--osdependencies",
             help="Install Operating System dependencies",
             action="store_true"
