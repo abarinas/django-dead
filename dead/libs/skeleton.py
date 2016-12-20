@@ -27,7 +27,10 @@ class Skeleton(object):
         cmd = "mv -f trunk/* ."
         os.system(cmd)
 
-        cmd = "mv -f trunk/{.,}* ."
+        cmd = "mv -f trunk/.bowerrc ."
+        os.system(cmd)
+
+        cmd = "mv -f trunk/.gitignore ."
         os.system(cmd)
 
         cmd = "rm -Rf trunk"
