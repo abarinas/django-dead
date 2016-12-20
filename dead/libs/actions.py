@@ -88,4 +88,7 @@ class DEADActions(object):
         ))
 
     def template_action(self):
-        pass
+        if not self.parsed_args.template:
+            return
+
+        print self.parsed_args.template

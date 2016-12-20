@@ -4,12 +4,11 @@ import os
 
 
 class DEADCommon(object):
-    def __init__(self, parser, subparser):
+    def __init__(self, parser):
         self.parsed_args = None
         self.dead_package = "git+https://github.com/000paradox000/django-dead.git"
         self.running_port = "9500"
         self.parser = parser
-        self.subparser = subparser
 
     def parse_args(self):
         self.parsed_args = self.parser.parse_args()

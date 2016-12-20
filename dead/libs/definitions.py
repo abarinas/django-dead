@@ -67,59 +67,67 @@ class DEADDefinition(object):
         )
 
     def template_definition(self):
-        self.subparser.add_argument(
-            "--templatename",
-            type=str,
-            help="Template name",
-            default="basic"
+        self.parser.add_argument(
+            "-t",
+            "--template",
+            help="Create a new template based django project (DEAD project)",
+            nvars=8,
+            type=str
         )
-
-        self.subparser.add_argument(
-            "--slug",
-            type=str,
-            help="slug name for the project. This is used for naming many items like the static_url, media_url, etc",
-            default="dead"
-        )
-
-        self.subparser.add_argument(
-            "--shorttitle",
-            type=str,
-            help="used by the basic template in the navbar brand place",
-            default="DEAD"
-        )
-
-        self.subparser.add_argument(
-            "--longtitle",
-            type=str,
-            help="used by the basic template in the navbar brand place",
-            default="DEAD Project"
-        )
-
-        self.subparser.add_argument(
-            "--domain",
-            type=str,
-            help="http domain used by the project when running in production",
-            default="dead.000cortazar000.pes"
-        )
-
-        self.subparser.add_argument(
-            "--email",
-            type=str,
-            help="email account used by the project for sending messages",
-            default="dead@000paradox000.pes"
-        )
-
-        self.subparser.add_argument(
-            "--password",
-            type=str,
-            help="email account password",
-            default="12345"
-        )
-
-        self.subparser.add_argument(
-            "--emailbccrecipient",
-            type=str,
-            help="main bcc recipient of the messages sent by the project",
-            default="info@000cortazar000.pes"
-        )
-
+        #
+        # self.subparser.add_argument(
+        #     "--templatename",
+        #     type=str,
+        #     help="Template name",
+        #     default="basic"
+        # )
+        #
+        # self.subparser.add_argument(
+        #     "--slug",
+        #     type=str,
+        #     help="slug name for the project. This is used for naming many items like the static_url, media_url, etc",
+        #     default="dead"
+        # )
+        #
+        # self.subparser.add_argument(
+        #     "--shorttitle",
+        #     type=str,
+        #     help="used by the basic template in the navbar brand place",
+        #     default="DEAD"
+        # )
+        #
+        # self.subparser.add_argument(
+        #     "--longtitle",
+        #     type=str,
+        #     help="used by the basic template in the navbar brand place",
+        #     default="DEAD Project"
+        # )
+        #
+        # self.subparser.add_argument(
+        #     "--domain",
+        #     type=str,
+        #     help="http domain used by the project when running in production",
+        #     default="dead.000cortazar000.pes"
+        # )
+        #
+        # self.subparser.add_argument(
+        #     "--email",
+        #     type=str,
+        #     help="email account used by the project for sending messages",
+        #     default="dead@000paradox000.pes"
+        # )
+        #
+        # self.subparser.add_argument(
+        #     "--password",
+        #     type=str,
+        #     help="email account password",
+        #     default="12345"
+        # )
+        #
+        # self.subparser.add_argument(
+        #     "--emailbccrecipient",
+        #     type=str,
+        #     help="main bcc recipient of the messages sent by the project",
+        #     default="info@000cortazar000.pes"
+        # )
+        #

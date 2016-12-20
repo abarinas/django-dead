@@ -53,16 +53,16 @@ Django Easy Applications Development
 * Create a new template based django project (DEAD project):
 
     ```bash
-    dead-admin.py add_template --templatename "basic" --slug "dead" --shorttitle "DEAD" --longtitle "DEAD Project" --domain "dead.000cortazar000.pes" --email "dead@000cortazar000.pes" --password "12345" --emailbccrecipient "info@000cortazar000.pes"
+    dead-admin.py -t "basic" "dead" "DEAD" "DEAD Project" "dead.000cortazar000.pes" "dead@000cortazar000.pes" "12345" "info@000cortazar000.pes"
     ```
     
     **Arguments:**
 
-    * **template_name:** template name (only basic for now). Default: basic
-    * **slug:** slug name for the project. This is used for naming many items like the static_url, media_url, etc. Default: dead
-    * **short_title:** this title is used by the basic template in the navbar brand place. Default: DEAD
-    * **long_title:** this title is used by the basic template in the footer. Default: DEAD Project 
-    * **domain:** http domain used by the project when running in production. Default: dead.000paradox000.pes
-    * **email:** email account used by the project for sending messages. Default: dead@000cortazar000.pes 
-    * **password:** email account password. Default: 12345
-    * **email_bcc_recipient:** main bcc recipient of the messages sent by the project. Default: info@000cortazar000.pes
+    * **template_name:** template name (only basic for now)
+    * **slug:** slug name for the project. This is used for naming many items like the static_url, media_url, etc
+    * **short_title:** this title is used by the basic template in the navbar brand place
+    * **long_title:** this title is used by the basic template in the footer 
+    * **domain:** http domain used by the project when running in production
+    * **email:** email account used by the project for sending messages 
+    * **password:** email account password
+    * **email_bcc_recipient:** main bcc recipient of the messages sent by the project
