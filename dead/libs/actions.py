@@ -51,5 +51,5 @@ class DEADActions(object):
 
         for pip_file in self.pip_files:
             os.system("pip install -U -r {}".format(
-                self.pip_file
+                pip_file
             ))
