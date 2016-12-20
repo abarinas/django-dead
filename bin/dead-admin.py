@@ -16,9 +16,6 @@ def main():
     # subparsers
     subparsers = parser.add_subparsers()
 
-    # default
-    default_parser = subparsers.add_parser()
-
     # add template parser
     add_template_parser = subparsers.add_parser(
         'add_template',
@@ -27,7 +24,7 @@ def main():
 
     # handler class
     dead_commander = DEADCommander(
-        parser=default_parser,
+        parser=parser,
         subparser=add_template_parser
     )
 
