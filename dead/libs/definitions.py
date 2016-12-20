@@ -71,7 +71,7 @@ class DEADDefinition(object):
             "-t",
             "--template",
             help="Create a new template based django project (DEAD project)",
-            nvars=8,
+            nargs=8,
             type=str
         )
         #
