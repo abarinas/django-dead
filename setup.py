@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-dead',
-    version='0.0.40',
+    version='0.0.41',
     packages=find_packages(),
     include_package_data=True,
     license='GPLv3',

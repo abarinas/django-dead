@@ -91,4 +91,4 @@ class DEADActions(object):
         if not self.parsed_args.template:
             return
 
-        print self.parsed_args.template
+        template_name, slug, short_title, long_title, domain, email, password, email_bcc_recipient = self.parsed_args.template
