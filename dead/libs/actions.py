@@ -6,27 +6,31 @@ import os
 
 class DEADActions(object):
     def update_action(self):
-        if self.parsed_args.update:
-            subprocess.call([
-                "pip",
-                "install",
-                "-U",
-                self.dead_package
-            ])
+        if not self.parsed_args.update:
+            return
+
+        subprocess.call([
+            "pip",
+            "install",
+            "-U",
+            self.dead_package
+        ])
 
     def delete_action(self):
-        if self.parsed_args.delete:
-            to_ignore = [
-                ".git",
-                ".gitignore",
-            ]
+        if not self.parsed_args.delete:
+            return
 
-            for item in os.listdir(self.instance_dir):
-                if item in to_ignore:
-                    continue
+        to_ignore = [
+            ".git",
+            ".gitignore",
+        ]
 
-                subprocess.call([
-                    "rm",
-                    "-Rf",
-                    item,
-                ])
+        for item in os.listdir(self.instance_dir):
+            if item in to_ignore:
+                continue
+
+            subprocess.call([
+                "rm",
+                "-Rf",
+                item,
+            ])
