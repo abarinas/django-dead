@@ -25,3 +25,11 @@ class DEADDefinition(object):
             help="Install Operating System dependencies",
             action="store_true"
         )
+
+    def install_pip_dependencies_definition(self):
+        self.parser.add_argument(
+            "-p",
+            "--pip",
+            help="Install pip dependencies",
+            action="store_true"
+        )

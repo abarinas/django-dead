@@ -44,3 +44,12 @@ class DEADActions(object):
         )
 
         os.system(cmd)
+
+    def install_pip_depedencies_action(self):
+        if not self.parsed_args.pip:
+            return
+
+        for pip_file in self.pip_files:
+            os.system("pip install -U -r {}".format(
+                self.pip_file
+            ))

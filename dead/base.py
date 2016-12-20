@@ -16,6 +16,9 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
         # Install operating system dependencies
         self.install_os_dependencies_definition()
 
+        # Install pip dependencies
+        self.install_pip_dependencies_definition()
+
     def make_actions(self):
         # Update package
         self.update_action()
@@ -25,6 +28,9 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
 
         # Install operating system dependencies
         self.install_os_dependencies_action()
+
+        # Install pip dependencies
+        self.install_pip_dependencies_action()
 
     def parse(self):
         self.make_definitions()

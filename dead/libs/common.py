@@ -55,9 +55,13 @@ class DEADCommon(object):
         )
 
     @property
-    def pip_default_file(self):
-        return os.path.join(
-            self.assets_dir,
-            "dependencies",
-            "pip.txt"
-        )
+    def pip_files(self):
+        out = [
+            os.path.join(
+                self.assets_dir,
+                "dependencies",
+                "pip.txt"
+            ),
+        ]
+
+        return out
