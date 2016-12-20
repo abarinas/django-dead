@@ -109,7 +109,7 @@ class DEADActions(object):
         )
         skeleton.inject()
 
-    def bower(self):
+    def bower_action(self):
         if not self.parsed_args.bower:
             return
 
