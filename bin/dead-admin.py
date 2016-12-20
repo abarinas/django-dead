@@ -17,7 +17,8 @@ def main():
     )
 
     # subparsers
-    subparsers = parser.add_subparsers()
+    subparsers = parser.add_subparsers(dest='cmd')
+    subparsers.required = True
 
     # add template parser
     add_template_parser = subparsers.add_parser(
