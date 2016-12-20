@@ -31,7 +31,7 @@ class Skeleton(object):
         os.system(cmd)
 
         cmd = "rm -Rf trunk"
-        os.system(cmd)
+        # os.system(cmd)
 
     def adjust_settings(self):
         cmd = "mv conf.orig/* conf && rm -Rf conf.orig"
