@@ -13,9 +13,19 @@ def main():
         "DEAD command line interface"
     )
 
+    # subparsers
+    subparsers = parser.add_subparsers()
+
+    # template subparser
+    subparser = subparsers.add_parser(
+        'add_template',
+        help='Create a new template based django project (DEAD project)'
+    )
+
     # handler class
     dead_commander = DEADCommander(
-        parser=parser
+        parser=parser,
+        subparser=subparser
     )
 
     dead_commander.parse()

@@ -31,6 +31,9 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
         # Run server
         self.run_definition()
 
+        # Template
+        self.template_definition()
+
     def make_actions(self):
         # Update package
         self.update_action()
@@ -55,6 +58,9 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
 
         # Run server
         self.run_action()
+
+        # Template
+        self.template_action()
 
     def parse(self):
         self.make_definitions()

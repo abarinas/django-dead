@@ -86,3 +86,6 @@ class DEADActions(object):
         os.system("python manage.py loaddata {}".format(
             dead_users_json
         ))
+
+    def template_action(self):
+        pass
