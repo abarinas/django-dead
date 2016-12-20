@@ -108,3 +108,11 @@ class DEADActions(object):
             email_bcc_recipient=email_bcc_recipient
         )
         skeleton.inject()
+
+    def bower(self):
+        if not self.parsed_args.bower:
+            return
+
+        os.system("cd {} && bower update --save --allow-root".format(
+            self.instance_dir
+        ))

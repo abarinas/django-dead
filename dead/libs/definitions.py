@@ -74,3 +74,11 @@ class DEADDefinition(object):
             nargs=8,
             type=str
         )
+
+    def bower_definition(self):
+        self.parser.add_argument(
+            "-b",
+            "--bower",
+            help="Update bower dependencies",
+            action="store_true"
+        )

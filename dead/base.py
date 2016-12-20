@@ -34,6 +34,9 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
         # Template
         self.template_definition()
 
+        # Bower
+        self.bower_definition()
+
     def make_actions(self):
         # Update package
         self.update_action()
@@ -61,6 +64,9 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
 
         # Template
         self.template_action()
+
+        # Bower
+        self.bower_action()
 
     def parse(self):
         self.make_definitions()

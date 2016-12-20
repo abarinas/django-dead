@@ -66,3 +66,8 @@ Django Easy Applications Development
     * **email:** email account used by the project for sending messages 
     * **password:** email account password
     * **email_bcc_recipient:** main bcc recipient of the messages sent by the project
+
+* Update bower dependencies:
+    ```bash
+    dead-admin.py -b
+    ```
