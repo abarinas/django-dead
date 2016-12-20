@@ -19,6 +19,9 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
         # Install pip dependencies
         self.install_pip_dependencies_definition()
 
+        # Create new django project
+        self.create_definition()
+
     def make_actions(self):
         # Update package
         self.update_action()
@@ -31,6 +34,9 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
 
         # Install pip dependencies
         self.install_pip_dependencies_action()
+
+        # Create new django project
+        self.create_action()
 
     def parse(self):
         self.make_definitions()

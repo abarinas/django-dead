@@ -27,3 +27,8 @@ Django Easy Applications Development
     ```bash
     dead-admin.py -p
     ```
+
+* Create new django project:
+    ```bash
+    dead-admin.py -c
+    ```

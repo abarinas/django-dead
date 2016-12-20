@@ -53,3 +53,11 @@ class DEADActions(object):
             os.system("pip install -U -r {}".format(
                 pip_file
             ))
+
+    def create_action(self):
+        if not self.parsed_args.create:
+            return
+
+        os.system("django-admin.py startproject conf {}".format(
+            self.instance_dir
+        ))

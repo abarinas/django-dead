@@ -33,3 +33,11 @@ class DEADDefinition(object):
             help="Install pip dependencies",
             action="store_true"
         )
+
+    def create_definition(self):
+        self.parser.add_argument(
+            "-c",
+            "--create",
+            help="Create new django project",
+            action="store_true"
+        )
