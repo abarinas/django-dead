@@ -73,4 +73,6 @@ class DEADActions(object):
         if not self.parsed_args.live:
             return
 
-        os.system("python manage.py runserver 0.0.0.0:9500")
+        os.system("python manage.py runserver 0.0.0.0:{}".format(
+            self.running_port
+        ))
