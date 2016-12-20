@@ -14,14 +14,10 @@ def main():
     )
 
     # subparsers
-    subparsers = parser.add_subparsers(
-        default_parser="default"
-    )
+    subparsers = parser.add_subparsers()
 
     # default
-    default_parser = subparsers.add_parser(
-        'default'
-    )
+    default_parser = subparsers.add_parser()
 
     # add template parser
     add_template_parser = subparsers.add_parser(
