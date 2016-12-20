@@ -42,3 +42,10 @@ Django Easy Applications Development
     ```bash
     dead-admin.py -l
     ```
+
+* Create system users:
+    ```bash
+    dead-admin.py -s
+    ```
+    * pk: 1, username: system, is_active: False
+    * pk: 2, username: admin, password: admin, is_superuser: True

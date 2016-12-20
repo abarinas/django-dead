@@ -76,3 +76,13 @@ class DEADActions(object):
         os.system("python manage.py runserver 0.0.0.0:{}".format(
             self.running_port
         ))
+
+    def system_users_action(self):
+        if not self.parsed_args.systemusers:
+            return
+
+        fixtures_dir = self.fixtures_dir
+        dead_users_json = os.path.join(fixtures_dir, "dead_users.json")
+        os.system("python manage.py loaddata {}".format(
+            dead_users_json
+        ))

@@ -54,7 +54,14 @@ class DEADDefinition(object):
         self.parser.add_argument(
             "-l",
             "--live",
-            # help="Run server on 0.0.0.0:{}".format(self.running_port),
-            help="Run server",
+            help="Run server on 0.0.0.0:{}".format(self.running_port),
+            action="store_true"
+        )
+
+    def system_users_definition(self):
+        self.parser.add_argument(
+            "-s",
+            "--systemusers",
+            help="Create system users",
             action="store_true"
         )
