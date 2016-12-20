@@ -13,8 +13,10 @@ def main():
         "DEAD command line interface"
     )
 
+    group = parser.add_mutually_exclusive_group()
+
     # subparsers
-    subparsers = parser.add_subparsers()
+    subparsers = group.add_subparsers()
 
     # template subparser
     subparser = subparsers.add_parser(
