@@ -22,11 +22,11 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
         # Create new django project
         self.create_definition()
 
-        # Create system users
-        self.system_users_definition()
-
         # Run migration
         self.migration_definition()
+
+        # Create system users
+        self.system_users_definition()
 
         # Run server
         self.run_definition()
@@ -50,11 +50,11 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
         # Create new django project
         self.create_action()
 
-        # Create system users
-        self.system_users_action()
-
         # Run migration
         self.migration_action()
+
+        # Create system users
+        self.system_users_action()
 
         # Run server
         self.run_action()
