@@ -34,7 +34,15 @@ class Skeleton(object):
         os.system(cmd)
 
         cmd = "rm -Rf trunk"
-        # os.system(cmd)
+        os.system(cmd)
+
+        fp = os.path.join(self.instance_dir, "db.sqlite3")
+        if os.path.exists(fp):
+            cmd = "mv {} {}".format(
+                fp,
+                os.path.join(self.instance_dir, "db", "{}.db".format(self.slug))
+            )
+            os.system(cmd)
 
     def adjust_settings(self):
         cmd = "mv conf.orig/* conf && rm -Rf conf.orig"
