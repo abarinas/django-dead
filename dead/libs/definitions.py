@@ -54,6 +54,7 @@ class DEADDefinition(object):
         self.parser.add_argument(
             "-l",
             "--live",
-            help="Run server on 0.0.0.0:{}".format(self.running_port),
+            # help="Run server on 0.0.0.0:{}".format(self.running_port),
+            help="Run server",
             action="store_true"
         )
