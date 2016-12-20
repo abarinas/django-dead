@@ -63,7 +63,7 @@ class DEADActions(object):
         ))
 
     def migration_action(self):
-        if not self.parsed_args.migrate:
+        if not self.parsed_args.migration:
             return
 
         os.system("python manage.py makemigrations")
