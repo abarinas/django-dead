@@ -10,9 +10,15 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
         # Update package
         self.update_definition()
 
+        # Delete project if exists
+        self.delete_definition()
+
     def make_actions(self):
         # Update package
         self.update_action()
+
+        # Delete project if exists
+        self.delete_action()
 
     def parse(self):
         self.make_definitions()
