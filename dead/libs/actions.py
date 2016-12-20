@@ -45,7 +45,7 @@ class DEADActions(object):
 
         os.system(cmd)
 
-    def install_pip_depedencies_action(self):
+    def install_pip_dependencies_action(self):
         if not self.parsed_args.pip:
             return
 
