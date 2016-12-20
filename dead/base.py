@@ -25,6 +25,9 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
         # Run migration
         self.migration_definition()
 
+        # Run server
+        self.run_definition()
+
     def make_actions(self):
         # Update package
         self.update_action()
@@ -43,6 +46,9 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
 
         # Run migration
         self.migration_action()
+
+        # Run server
+        self.run_action()
 
     def parse(self):
         self.make_definitions()

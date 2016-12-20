@@ -49,3 +49,11 @@ class DEADDefinition(object):
             help="Run makemigrations and migration",
             action="store_true"
         )
+
+    def run_definition(self):
+        self.parser.add_argument(
+            "-l",
+            "--live",
+            help="Run server on 0.0.0.0:{}".format(self.running_port),
+            action="store_true"
+        )

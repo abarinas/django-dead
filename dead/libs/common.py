@@ -7,6 +7,7 @@ class DEADCommon(object):
     def __init__(self, parser, group):
         self.parsed_args = None
         self.dead_package = "git+https://github.com/000paradox000/django-dead.git"
+        self.running_port = "9500"
         self.parser = parser
         self.group = group
 

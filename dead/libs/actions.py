@@ -68,3 +68,9 @@ class DEADActions(object):
 
         os.system("python manage.py makemigrations")
         os.system("python manage.py migrate")
+
+    def run_action(self):
+        if not self.parsed_args.live:
+            return
+
+        os.system("python manage.py runserver 0.0.0.0:9500")

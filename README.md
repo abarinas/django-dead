@@ -37,3 +37,8 @@ Django Easy Applications Development
     ```bash
     dead-admin.py -m
     ```
+
+* Run project in 0.0.0.0:9500:
+    ```bash
+    dead-admin.py -l
+    ```
