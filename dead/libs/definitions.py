@@ -9,3 +9,11 @@ class DEADDefinition(object):
             help="Update DEAD package",
             action="store_true"
         )
+
+    def delete_definition(self):
+        self.parser.add_argument(
+            "-d",
+            "--delete",
+            help="Delete project",
+            action="store_true"
+        )

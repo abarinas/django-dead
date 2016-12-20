@@ -12,3 +12,8 @@ Django Easy Applications Development
     ```bash
     dead-admin.py -u
     ```
+
+* Delete django project:
+    ```bash
+    dead-admin.py -d
+    ```
