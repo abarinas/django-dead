@@ -3,6 +3,8 @@
 import subprocess
 import os
 
+from skeleton import Skeleton
+
 
 class DEADActions(object):
     def update_action(self):
@@ -93,3 +95,16 @@ class DEADActions(object):
 
         template_name, slug, short_title, long_title, domain, email, password, email_bcc_recipient = self.parsed_args.template
 
+        # Inject skeleton to instance
+        skeleton = Skeleton(
+            skeleton_repo=self.skeleton_package,
+            instance_dir=self.instance_dir,
+            slug=slug,
+            short_title=short_title,
+            long_title=long_title,
+            domain=domain,
+            email=email,
+            password=password,
+            email_bcc_recipient=email_bcc_recipient
+        )
+        skeleton.inject()
