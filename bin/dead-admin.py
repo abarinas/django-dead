@@ -13,21 +13,26 @@ def main():
         "DEAD command line interface"
     )
 
-    group = parser.add_mutually_exclusive_group()
-
     # subparsers
-    subparsers = group.add_subparsers()
+    subparsers = parser.add_subparsers(
+        default_parser="default"
+    )
 
-    # template subparser
-    subparser = subparsers.add_parser(
+    # default
+    default_parser = subparsers.add_parser(
+        'default'
+    )
+
+    # add template parser
+    add_template_parser = subparsers.add_parser(
         'add_template',
         help='Create a new template based django project (DEAD project)'
     )
 
     # handler class
     dead_commander = DEADCommander(
-        parser=parser,
-        subparser=subparser
+        parser=default_parser,
+        subparser=add_template_parser
     )
 
     dead_commander.parse()
