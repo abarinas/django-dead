@@ -14,7 +14,6 @@ def main():
     )
 
     # subparsers
-    subparsers = parser.add_subparsers()
     subparsers = parser.add_subparsers(dest='cmd')
     subparsers.required = False
 
