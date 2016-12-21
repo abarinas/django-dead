@@ -7,8 +7,8 @@ from skeleton import Skeleton
 
 
 class DEADActions(object):
-    def update_action(self):
-        if not self.parsed_args.update:
+    def update_action(self, jump=False):
+        if not self.parsed_args.update and not jump:
             return
 
         subprocess.call([
@@ -18,8 +18,8 @@ class DEADActions(object):
             self.dead_package
         ])
 
-    def delete_action(self):
-        if not self.parsed_args.delete:
+    def delete_action(self, jump=False):
+        if not self.parsed_args.delete and not jump:
             return
 
         to_ignore = [
@@ -37,8 +37,8 @@ class DEADActions(object):
                 item,
             ])
 
-    def install_os_dependencies_action(self):
-        if not self.parsed_args.osdependencies:
+    def install_os_dependencies_action(self, jump=False):
+        if not self.parsed_args.osdependencies and not jump:
             return
 
         cmd = "sh {}".format(
@@ -47,8 +47,8 @@ class DEADActions(object):
 
         os.system(cmd)
 
-    def install_pip_dependencies_action(self):
-        if not self.parsed_args.pip:
+    def install_pip_dependencies_action(self, jump=False):
+        if not self.parsed_args.pip and not jump:
             return
 
         for pip_file in self.pip_files:
@@ -56,31 +56,31 @@ class DEADActions(object):
                 pip_file
             ))
 
-    def create_action(self):
-        if not self.parsed_args.create:
+    def create_action(self, jump=False):
+        if not self.parsed_args.create and not jump:
             return
 
         os.system("django-admin.py startproject conf {}".format(
             self.instance_dir
         ))
 
-    def migration_action(self):
-        if not self.parsed_args.migration:
+    def migration_action(self, jump=False):
+        if not self.parsed_args.migration and not jump:
             return
 
         os.system("python manage.py makemigrations")
         os.system("python manage.py migrate")
 
-    def run_action(self):
-        if not self.parsed_args.live:
+    def run_action(self, jump=False):
+        if not self.parsed_args.live and not jump:
             return
 
         os.system("python manage.py runserver 0.0.0.0:{}".format(
             self.running_port
         ))
 
-    def system_users_action(self):
-        if not self.parsed_args.systemusers:
+    def system_users_action(self, jump=False):
+        if not self.parsed_args.systemusers and not jump:
             return
 
         fixtures_dir = self.fixtures_dir
@@ -89,11 +89,23 @@ class DEADActions(object):
             dead_users_json
         ))
 
-    def template_action(self):
-        if not self.parsed_args.template:
+    def template_action(self, jump=False):
+        if not self.parsed_args.template and not jump:
             return
 
-        template_name, slug, short_title, long_title, domain, email, password, email_bcc_recipient = self.parsed_args.template
+        if not jump:
+            template_name, slug, short_title, long_title, domain, email, password, email_bcc_recipient = self.parsed_args.template
+        else:
+            template_name, slug, short_title, long_title, domain, email, password, email_bcc_recipient = [
+                "basic",
+                "dead",
+                "DEAD",
+                "DEAD Project",
+                "dead.000cortazar000.pes",
+                "dead@000cortazar000.pes",
+                "12345",
+                "info@000cortazar000.pes"
+            ]
 
         # Inject skeleton to instance
         skeleton = Skeleton(
@@ -109,10 +121,24 @@ class DEADActions(object):
         )
         skeleton.inject()
 
-    def bower_action(self):
-        if not self.parsed_args.bower:
+    def bower_action(self, jump=False):
+        if not self.parsed_args.bower and not jump:
             return
 
         os.system("cd {} && bower update --save --allow-root".format(
             self.instance_dir
         ))
+
+    def asap_action(self, jump=False):
+        if not self.parsed_args.asap and not jump:
+            return
+
+        self.update_action()
+        self.install_os_dependencies_action()
+        self.delete_action()
+        self.create_action()
+        self.template_action()
+        self.system_users_action()
+        self.migration_action()
+        self.bower_action()
+        self.install_pip_dependencies_action()

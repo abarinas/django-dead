@@ -37,6 +37,9 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
         # Bower
         self.bower_definition()
 
+        # ASAP
+        self.asap_definition()
+
     def make_actions(self):
         # Update package
         self.update_action()
@@ -67,6 +70,9 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
 
         # Bower
         self.bower_action()
+
+        # ASAP
+        self.asap_action()
 
     def parse(self):
         self.make_definitions()

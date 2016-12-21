@@ -82,3 +82,11 @@ class DEADDefinition(object):
             help="Update bower dependencies",
             action="store_true"
         )
+
+    def asap_definition(self):
+        self.parser.add_argument(
+            "-a",
+            "--asap",
+            help="Generate a project ASAP",
+            action="store_true"
+        )

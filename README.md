@@ -71,3 +71,22 @@ Django Easy Applications Development
     ```bash
     dead-admin.py -b
     ```
+
+* Generate a project ASAP:
+    ```bash
+    dead-admin.py -a
+    ```
+
+    **This option run the following steps:**
+
+    ```bash
+    dead-admin.py -u
+    dead-admin.py -o
+    dead-admin.py -d
+    dead-admin.py -c
+    dead-admin.py -t "basic" "dead" "DEAD" "DEAD Project" "dead.000cortazar000.pes" "dead@000cortazar000.pes" "12345" "info@000cortazar000.pes"
+    dead-admin.py -s
+    dead-admin.py -m
+    dead-admin.py -b
+    dead-admin.py -p
+    ```
