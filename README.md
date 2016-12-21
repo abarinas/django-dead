@@ -84,9 +84,10 @@ Django Easy Applications Development
     dead-admin.py -o
     dead-admin.py -d
     dead-admin.py -c
-    dead-admin.py -t "basic" "dead" "DEAD" "DEAD Project" "dead.000cortazar000.pes" "dead@000cortazar000.pes" "12345" "info@000cortazar000.pes"
+    dead-admin.py -m
     dead-admin.py -s
+    dead-admin.py -t "basic" "dead" "DEAD" "DEAD Project" "dead.000cortazar000.pes" "dead@000cortazar000.pes" "12345" "info@000cortazar000.pes"
+    dead-admin.py -p
     dead-admin.py -m
     dead-admin.py -b
-    dead-admin.py -p
     ```
