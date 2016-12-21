@@ -133,12 +133,12 @@ class DEADActions(object):
         if not self.parsed_args.asap and not jump:
             return
 
-        self.update_action()
-        self.install_os_dependencies_action()
-        self.delete_action()
-        self.create_action()
-        self.template_action()
-        self.system_users_action()
-        self.migration_action()
-        self.bower_action()
-        self.install_pip_dependencies_action()
+        self.update_action(jump=True)
+        self.install_os_dependencies_action(jump=True)
+        self.delete_action(jump=True)
+        self.create_action(jump=True)
+        self.template_action(jump=True)
+        self.system_users_action(jump=True)
+        self.migration_action(jump=True)
+        self.bower_action(jump=True)
+        self.install_pip_dependencies_action(jump=True)
