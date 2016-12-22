@@ -75,6 +75,9 @@ class DEADActions(object):
         if not self.parsed_args.live and not jump:
             return
 
+        if self.parsed_args.notify:
+            self.notify_action(jump=True)
+
         os.system("python manage.py runserver 0.0.0.0:{}".format(
             self.running_port
         ))
