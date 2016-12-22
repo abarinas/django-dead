@@ -40,6 +40,10 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
         # ASAP
         self.asap_definition()
 
+        # Notify
+        self.notify_definition()
+
+
     def make_actions(self):
         # Update package
         self.update_action()
@@ -73,6 +77,9 @@ class DEADCommander(DEADActions, DEADDefinition, DEADCommon):
 
         # ASAP
         self.asap_action()
+
+        # Notify
+        self.notify_action()
 
     def parse(self):
         self.make_definitions()

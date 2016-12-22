@@ -72,6 +72,11 @@ Django Easy Applications Development
     dead-admin.py -b
     ```
 
+* Send desktop notification (notify-send) when executed:
+    ```bash
+    dead-admin.py -n
+    ```
+
 * Generate a project ASAP:
     ```bash
     dead-admin.py -a

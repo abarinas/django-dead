@@ -143,3 +143,10 @@ class DEADActions(object):
         self.install_pip_dependencies_action(jump=True)
         self.migration_action(jump=True)
         self.bower_action(jump=True)
+        self.notify_action(jump=True)
+
+    def notify_action(self, jump=False):
+        if not self.parsed_args.notify and not jump:
+            return
+
+        os.system('notify-send -t 2000 "dead-admin.py finalizado"')

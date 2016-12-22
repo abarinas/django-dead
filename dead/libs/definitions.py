@@ -90,3 +90,11 @@ class DEADDefinition(object):
             help="Generate a project ASAP",
             action="store_true"
         )
+
+    def notify_definition(self):
+        self.parser.add_argument(
+            "-n",
+            "--notify",
+            help="Send desktop notification (notify-send) when executed",
+            action="store_true"
+        )
